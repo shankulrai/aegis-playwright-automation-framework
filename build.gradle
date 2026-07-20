@@ -1,5 +1,5 @@
 plugins {
-    base
+    id "base"
 }
 
 group = "com.enterprise.framework"
@@ -10,19 +10,19 @@ subprojects {
     version = rootProject.version
 
     plugins.withId("java") {
-        extensions.configure<JavaPluginExtension>("java") {
+        java {
             withSourcesJar()
             withJavadocJar()
         }
 
-        tasks.withType<JavaCompile>().configureEach {
-            options.release.set(21)
+        tasks.withType(JavaCompile).configureEach {
+            options.release = 21
         }
 
-        tasks.withType<Test>().configureEach {
+        tasks.withType(Test).configureEach {
             useJUnitPlatform()
-            systemProperty("junit.jupiter.extensions.autodetection.enabled", "true")
-            val forwardedProperties = listOf(
+            systemProperty "junit.jupiter.extensions.autodetection.enabled", "true"
+            def forwardedProperties = [
                 "env",
                 "headless",
                 "browser",
@@ -32,14 +32,15 @@ subprojects {
                 "timeoutMs",
                 "baseUrl",
                 "apiBaseUrl"
-            )
-            forwardedProperties.forEach { key ->
-                System.getProperty(key)?.let { value ->
-                    systemProperty(key, value)
+            ]
+            forwardedProperties.each { key ->
+                def value = System.getProperty(key)
+                if (value != null) {
+                    systemProperty key, value
                 }
             }
             testLogging {
-                events("passed", "skipped", "failed")
+                events "passed", "skipped", "failed"
             }
         }
     }

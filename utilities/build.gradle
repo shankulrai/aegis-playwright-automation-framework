@@ -1,0 +1,15 @@
+plugins {
+    id "java-library"
+}
+
+dependencies {
+    api project(":core")
+    api libs.jackson.databind
+    api libs.jackson.dataformat.yaml
+    api libs.jackson.dataformat.csv
+    api libs.apache.poi
+    api libs.restassured
+    implementation libs.assertj
+    testImplementation libs.junit.api
+    testRuntimeOnly libs.junit.engine
+}
