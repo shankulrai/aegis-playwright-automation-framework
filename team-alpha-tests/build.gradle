@@ -1,0 +1,14 @@
+plugins {
+    id "java-library"
+}
+
+dependencies {
+    implementation project(":core")
+    implementation project(":pages")
+    implementation project(":utilities")
+    implementation project(":reports")
+    testImplementation libs.junit.api
+    testImplementation libs.assertj
+    testRuntimeOnly libs.junit.engine
+    testRuntimeOnly "org.junit.platform:junit-platform-launcher:1.11.0"
+}

@@ -137,8 +137,21 @@ aegis-playwright-automation-framework
 ├── ui-tests
 ├── data-provider
 ├── reports
-└── integration
+├── integration
+└── team-alpha-tests
 ```
+
+## Multi-Team Model (Core Protected)
+
+- `core/**` is platform-owned and protected by CODEOWNERS + CI policy.
+- Teams create their own modules (for example: `team-alpha-tests`) and depend on shared modules instead of editing `core`.
+- CI fails pull requests that modify `core/**` so team changes stay isolated.
+
+To add a new team module:
+1. Create `team-<name>-tests/build.gradle`.
+2. Add `include("team-<name>-tests")` in `settings.gradle`.
+3. Add tests under `team-<name>-tests/src/test/java/...` using `core/pages/utilities/reports`.
+4. Run `./gradlew :team-<name>-tests:test`.
 
 ## Execution Flow
 

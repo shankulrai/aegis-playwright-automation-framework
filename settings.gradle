@@ -23,5 +23,6 @@ include(
     "ui-tests",
     "data-provider",
     "reports",
-    "integration"
+    "integration",
+    "team-alpha-tests"
 )
