@@ -1,5 +1,5 @@
 plugins {
-    id("java-module-conventions")
+    id("java-library")
 }
 
 dependencies {
@@ -9,6 +9,7 @@ dependencies {
     implementation(libs.allure.java.commons)
     implementation(libs.log4j.api)
     implementation(libs.log4j.core)
+    compileOnly(libs.junit.api)
     testImplementation(libs.junit.api)
     testRuntimeOnly(libs.junit.engine)
 }

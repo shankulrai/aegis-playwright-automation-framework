@@ -214,7 +214,9 @@ Run hybrid scenario:
 ## Reporting and Artifacts
 
 - **Allure** attachments for screenshots/page source/traces on failures
-- **Extent** HTML reports
+- **Extent** HTML reports generated automatically after every test run:
+  - `ui-tests/build/extent/index.html`
+  - `api-tests/build/extent/index.html`
 - Execution logs per run in module build directories
 
 ## CI/CD
