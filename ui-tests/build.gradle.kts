@@ -1,0 +1,19 @@
+plugins {
+    id("java-module-conventions")
+}
+
+dependencies {
+    implementation(project(":core"))
+    implementation(project(":pages"))
+    implementation(project(":utilities"))
+    implementation(project(":reports"))
+    testImplementation(libs.cucumber.java)
+    testImplementation(libs.cucumber.junit.platform)
+    testImplementation(libs.cucumber.picocontainer)
+    testImplementation(libs.junit.platform.suite)
+    testImplementation(libs.junit.api)
+    testImplementation(libs.assertj)
+    testImplementation(libs.allure.java.commons)
+    testImplementation(libs.allure.cucumber)
+    testRuntimeOnly(libs.junit.engine)
+}

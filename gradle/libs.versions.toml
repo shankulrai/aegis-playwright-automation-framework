@@ -1,0 +1,49 @@
+[versions]
+assertj = "3.26.3"
+allure = "2.29.0"
+aws = "2.27.21"
+apache-poi = "5.3.0"
+cucumber = "7.18.1"
+extent = "5.1.2"
+jackson = "2.17.2"
+junit = "5.11.0"
+kafka = "3.7.0"
+lombok = "1.18.34"
+log4j = "2.24.1"
+owner = "1.0.12"
+playwright = "1.46.0"
+restassured = "5.5.0"
+slf4j = "2.0.16"
+testcontainers = "1.20.1"
+
+[libraries]
+assertj = { module = "org.assertj:assertj-core", version.ref = "assertj" }
+allure-java-commons = { module = "io.qameta.allure:allure-java-commons", version.ref = "allure" }
+allure-cucumber = { module = "io.qameta.allure:allure-cucumber7-jvm", version.ref = "allure" }
+allure-playwright = { module = "io.qameta.allure:allure-playwright", version.ref = "allure" }
+aws-s3 = { module = "software.amazon.awssdk:s3", version.ref = "aws" }
+aws-sns = { module = "software.amazon.awssdk:sns", version.ref = "aws" }
+aws-sqs = { module = "software.amazon.awssdk:sqs", version.ref = "aws" }
+aws-sts = { module = "software.amazon.awssdk:sts", version.ref = "aws" }
+aws-core = { module = "software.amazon.awssdk:auth", version.ref = "aws" }
+apache-poi = { module = "org.apache.poi:poi-ooxml", version.ref = "apache-poi" }
+cucumber-java = { module = "io.cucumber:cucumber-java", version.ref = "cucumber" }
+cucumber-junit-platform = { module = "io.cucumber:cucumber-junit-platform-engine", version.ref = "cucumber" }
+cucumber-picocontainer = { module = "io.cucumber:cucumber-picocontainer", version.ref = "cucumber" }
+extent = { module = "com.aventstack:extentreports", version.ref = "extent" }
+jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson" }
+jackson-dataformat-csv = { module = "com.fasterxml.jackson.dataformat:jackson-dataformat-csv", version.ref = "jackson" }
+jackson-dataformat-yaml = { module = "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml", version.ref = "jackson" }
+junit-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit" }
+junit-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit" }
+junit-platform-suite = { module = "org.junit.platform:junit-platform-suite", version = "1.11.0" }
+kafka-clients = { module = "org.apache.kafka:kafka-clients", version.ref = "kafka" }
+lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
+log4j-api = { module = "org.apache.logging.log4j:log4j-api", version.ref = "log4j" }
+log4j-core = { module = "org.apache.logging.log4j:log4j-core", version.ref = "log4j" }
+owner = { module = "org.aeonbits.owner:owner", version.ref = "owner" }
+playwright = { module = "com.microsoft.playwright:playwright", version.ref = "playwright" }
+restassured = { module = "io.rest-assured:rest-assured", version.ref = "restassured" }
+slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
+testcontainers = { module = "org.testcontainers:testcontainers", version.ref = "testcontainers" }
+testcontainers-junit = { module = "org.testcontainers:junit-jupiter", version.ref = "testcontainers" }

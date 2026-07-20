@@ -1,0 +1,17 @@
+plugins {
+    id("java-module-conventions")
+}
+
+dependencies {
+    api(libs.playwright)
+    api(libs.owner)
+    api(libs.assertj)
+    api(libs.log4j.api)
+    api(libs.slf4j.api)
+    implementation(libs.log4j.core)
+    implementation(libs.jackson.databind)
+    implementation(libs.jackson.dataformat.yaml)
+    implementation(libs.jackson.dataformat.csv)
+    testImplementation(libs.junit.api)
+    testRuntimeOnly(libs.junit.engine)
+}

@@ -1,0 +1,13 @@
+plugins {
+    id("java-module-conventions")
+}
+
+dependencies {
+    implementation(project(":core"))
+    implementation(project(":utilities"))
+    implementation(libs.restassured)
+    implementation(libs.assertj)
+    testImplementation(libs.junit.api)
+    testRuntimeOnly(libs.junit.engine)
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher:1.11.0")
+}

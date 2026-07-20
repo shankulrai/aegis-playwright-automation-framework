@@ -1,0 +1,14 @@
+plugins {
+    id("java-module-conventions")
+}
+
+dependencies {
+    api(project(":core"))
+    api(project(":utilities"))
+    api(project(":aws-services"))
+    implementation(libs.kafka.clients)
+    implementation(libs.testcontainers)
+    implementation(libs.testcontainers.junit)
+    testImplementation(libs.junit.api)
+    testRuntimeOnly(libs.junit.engine)
+}
